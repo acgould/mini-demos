@@ -12,13 +12,13 @@ This initial step will iterate through all n elements of the list and similarly 
 
 The next step is then to iterate through the list, checking each element until finding an unique element. Therefore, with the worst-case possibility of iterating over all n elements in the list and a true "worst case" of O(n) for the lookup, the true big-O runtime for this step is O(n^2). However, as before, we can expect constant average lookup time, reducing our time to look up n values to O(n). No significant additional space is used in this step. 
 
-Therefore, the true "worst case" for this funtion is O(n^2), but we can expect the performance to be more like O(n). The data structure uses O(n) space. 
+Therefore, the true "worst case" for this function is O(n^2), but we can expect the performance to be more like O(n). The data structure uses O(n) space. 
 
-This function accounts for lists with no unique values. In the event that no unique value is found, the function returns None. An empty list would be a special case of this, but the for loops would not run, returning None. Therefore, a explicit check for this case would be redundant. 
+This function accounts for lists with no unique values. In the event that no unique value is found, the function returns None. An empty list would be a special case of this, but the for loops would not run, returning None. Therefore, an explicit check for this case would be redundant. 
 
 ### last_unique_element(L)
 This function returns the last unique element in a given list.
 
 This function is identical to the first_unique_element(L), except that the second step iterates through the list backward, checking each element until finding an unique element. This is accomplished using python's built in reversed function, which returns a reverse iterator but does not expend the effort to reverse the list.
 
-Therefore, the true "worst case" for this funtion is O(n^2), but we can expect the performance to be more like O(n). The data structure uses O(n) space. 
+Therefore, the true "worst case" for this function is O(n^2), but we can expect the performance to be more like O(n). The data structure uses O(n) space. 
