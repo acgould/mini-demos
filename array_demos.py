@@ -1,4 +1,6 @@
+# array_demos.py
 # Functions which work with arrays
+
 from array import array
 
 # First Unique Element
@@ -48,4 +50,27 @@ def last_unique_element(L):
 
     # In the event that there are no unique elements, return null
     return None
+
+# Min, Max, and Mean
+def min_max_mean(L):
+	""" 
+	Given a list of numbers, L, this function returns a tuple of 
+	(min, max, mean), where the mean is a float.
+	"""
+	# special case: empty list
+	if len(L) == 0:
+		return (None, None, None)
+
+	list_min = L[0]
+	list_max = L[0]
+	total = 0
+
+	for num in L:
+		if num < list_min:
+			list_min = num
+		if num > list_max:
+			list_max = num
+		total += num
+
+	return (list_min, list_max, float(total)/len(L))
 

@@ -23,5 +23,10 @@ This function is identical to the first_unique_element(L), except that the secon
 
 Therefore, the true "worst case" for this function is O(n^2), but we can expect the performance to be more like O(n). The data structure uses O(n) space. 
 
+### min_max_mean(L)
+This function returns a tuple with the (min, max, mean) of a list of numbers.
+
+The function steps through the list of n elements once, making two constant-time comparisons and one to three value changes each time, for a total runtime of O(n). The function requires storage for three int or float values.
+
 ## test_array_demos.py
 This file contains simple tests for the functions in array_demos.py using py.test.
