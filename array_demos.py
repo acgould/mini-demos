@@ -2,6 +2,7 @@
 # Functions which work with arrays
 
 from array import array
+from collections import defaultdict
 
 # First Unique Element
 def first_unique_element(L):
@@ -53,24 +54,27 @@ def last_unique_element(L):
 
 # Min, Max, and Mean
 def min_max_mean(L):
-	""" 
-	Given a list of numbers, L, this function returns a tuple of 
-	(min, max, mean), where the mean is a float.
-	"""
-	# special case: empty list
-	if len(L) == 0:
-		return (None, None, None)
+    """ 
+    Given a list of numbers, L, this function returns a tuple of 
+    (min, max, mean).
+    """
+    # special case: empty list
+    if len(L) == 0:
+        return (None, None, None)
 
-	list_min = L[0]
-	list_max = L[0]
-	total = 0
+    # initialize min, max, total
+    list_min = L[0]
+    list_max = L[0]
+    total = 0
 
-	for num in L:
-		if num < list_min:
-			list_min = num
-		if num > list_max:
-			list_max = num
-		total += num
+    # go through List, updating min, max, total
+    for num in L:
+        if num < list_min:
+            list_min = num
+        if num > list_max:
+            list_max = num
+        total += num
 
-	return (list_min, list_max, float(total)/len(L))
+    # return min, max, and translate total to mean
+    return (list_min, list_max, total/len(L))
 
