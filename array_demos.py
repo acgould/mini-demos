@@ -1,13 +1,9 @@
-# Last Unique Element
+# Functions which work with arrays
 from array import array
 
+# Last Unique Element
 def last_unique_element(L):
     """ This function returns the last unique element in a given list."""
-    length = len(L)
-
-    # Special case: the array has length zero
-    if length == 0:
-        return None
 
     # First, determine the unique elements of the array.
     # Keep track of 'uniqueness' elements in a dictionary (hashtable).
