@@ -22,3 +22,6 @@ This function returns the last unique element in a given list.
 This function is identical to the first_unique_element(L), except that the second step iterates through the list backward, checking each element until finding an unique element. This is accomplished using python's built in reversed function, which returns a reverse iterator but does not expend the effort to reverse the list.
 
 Therefore, the true "worst case" for this function is O(n^2), but we can expect the performance to be more like O(n). The data structure uses O(n) space. 
+
+## test_array_demos.py
+This file contains simple tests for the functions in array_demos.py using py.test.
