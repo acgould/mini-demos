@@ -30,3 +30,40 @@ The function steps through the list of n elements once, making two constant-time
 
 ## test_array_demos.py
 This file contains simple tests for the functions in array_demos.py using py.test.
+
+## linkedlist_demos.py
+
+This file contains two simple classes for Node and LinkedList. 
+
+### Node
+
+Each Node has a value and a next. 
+
+If given no parameters upon initialization, a Node with value = None and next = None will be created. Given a single value v, a Node with value = v and next = None will be created. Given two parameters as Node(v, n) a Node with value = v and next = n will be created.
+
+A Node has the following self-explanitory member functions:
+*get_value()
+*get_next()
+*set_next()
+
+###LinkedList 
+
+Each LinkedList simply has a head Node.
+
+If given no parameters upon initialization, an empty LinkedList with head = None will be created. Given a single Node n, a LinkedList with head = n will be created.
+
+A LinkedList has the following self-explanitory member functions:
+*get_head()
+*append_to_front() - costs O(1) time
+*append_to_end() - costs O(n) time
+
+#### LinkedList.return_list()
+
+This function returns the values in the LinkedList in a traditional list format. This is useful for testing.
+
+#### LinkedList.return(), LinkedList.node_reverse()
+
+The reverse() function completely reverses the LinkedList, including updating the head to point to the new front. This process takes O(n) time. The reverse() function is a wrapper for the recursive node_reverse function, which swaps the direction of the nexts in the list until reaching the end, when it returns the new head of the list.
+
+## test_linkedlist_demos.py
+This file contains simple tests for the functions and classes in linkedlist_demos.py using py.test.
